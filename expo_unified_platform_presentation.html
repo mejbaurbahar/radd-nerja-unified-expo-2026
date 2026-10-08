@@ -446,8 +446,8 @@
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 20px;
-      width: 94%;
-      max-width: 820px;
+      width: 95%;
+      max-width: 920px;
       box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
       overflow: hidden;
       transform: scale(0.95) translateY(12px);
@@ -526,7 +526,7 @@
     }
     .exec-modal-body {
       padding: 20px 24px;
-      max-height: 540px;
+      max-height: 590px;
       overflow-y: auto;
       font-size: 0.88rem;
       color: #334155;
@@ -647,13 +647,13 @@
     /* Interactive Real Website Simulator in Modal */
     .website-mockup-browser {
       border: 1px solid #cbd5e1;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
       background: #ffffff;
     }
     .browser-top-bar {
-      background: #f1f5f9;
+      background: #f8fafc;
       border-bottom: 1px solid #e2e8f0;
       padding: 10px 14px;
       display: flex;
@@ -673,26 +673,30 @@
       flex: 1;
       background: #ffffff;
       border: 1px solid #cbd5e1;
-      border-radius: 6px;
-      padding: 4px 12px;
+      border-radius: 8px;
+      padding: 5px 12px;
       font-size: 0.76rem;
       font-family: var(--font-mono);
-      color: #475569;
+      color: #334155;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
     .website-content-viewport {
-      padding: 18px;
-      background: #ffffff;
+      padding: 18px 20px;
+      background: #fafbfc;
     }
     .site-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #f1f5f9;
-      padding-bottom: 12px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 10px 16px;
       margin-bottom: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
     }
     .site-packages-grid {
       display: grid;
@@ -700,21 +704,126 @@
       gap: 14px;
     }
     .package-card {
+      background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 14px;
-      transition: all 0.2s ease;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
     }
     .package-card:hover, .package-card.hovered {
       border-color: #2563eb;
-      box-shadow: 0 8px 20px rgba(37,99,235,0.12);
-      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(37,99,235,0.14);
+      transform: translateY(-3px);
     }
     .package-card.selected {
       border-color: #059669;
+      box-shadow: 0 8px 24px rgba(5,150,105,0.16);
       background: #f0fdf4;
+    }
+    .pkg-img-wrap {
+      width: 100%;
+      height: 118px;
+      position: relative;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+    .pkg-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .package-card:hover .pkg-img-wrap img {
+      transform: scale(1.05);
+    }
+    .pkg-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.02em;
+    }
+    .pkg-badge-vip {
+      background: linear-gradient(135deg, #d97706, #b45309);
+    }
+    .pkg-body {
+      padding: 12px 14px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .pkg-title {
+      font-weight: 800;
+      color: #0f172a;
+      font-size: 0.92rem;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .pkg-sub {
+      font-size: 0.74rem;
+      color: #64748b;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .pkg-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px 0;
+      font-size: 0.72rem;
+      color: #475569;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .pkg-features li::before {
+      content: "✓ ";
+      color: #059669;
+      font-weight: 700;
+    }
+    .pkg-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding-top: 8px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .pkg-price {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #2563eb;
+      font-family: var(--font-mono);
+    }
+    .pkg-price-unit {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #64748b;
+      font-family: var(--font-sans);
+    }
+    .pkg-action-hint {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #059669;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      padding: 3px 8px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+    .package-card:hover .pkg-action-hint {
+      background: #059669;
+      color: #ffffff;
     }
 
     /* Fallback Toast */
@@ -1272,12 +1381,15 @@
           </div>
           <h3 class="card-title">Radd AI: Operations & Gateway Microservice</h3>
           <ul style="color: var(--text-body); font-size: 0.88rem; line-height: 1.7; padding-left: 18px; margin-bottom: 12px;">
-            <li><strong>Meta WhatsApp Cloud API:</strong> Tier-4 official enterprise connection with zero ban risk.</li>
-            <li><strong>Multi-Tenant Workspace Engine:</strong> 713 registered companies in production; isolated tenant billing.</li>
-            <li><strong>Broadcast Distribution:</strong> High-speed template campaigns dispatched via AWS Lambda & Redis.</li>
-            <li><strong>WhatsApp Migration Tool:</strong> Frictionless porting of existing phone numbers to the official WABA API.</li>
+            <li><strong>Meta Embedded Signup & Official WABA:</strong> Tier-4 official Cloud API integration with zero ban risk and instant number provisioning.</li>
+            <li><strong>WhatsApp Zero-Downtime Migration:</strong> Automated porting pipeline to transition pilgrim service hotlines without losing chat histories.</li>
+            <li><strong>Multi-Agent Shared Inbox & Shift Planner:</strong> Role-based queue routing, unattended inquiry filters, and 24/7 round-the-clock shift coverage.</li>
+            <li><strong>Template Broadcasts & CSAT Surveys:</strong> Mass emergency camp broadcasts and automated post-resolution satisfaction scoring.</li>
           </ul>
-          <button class="action-btn-sm primary" onclick="pingMicroservice('Radd Gateway', 'radd-health')">⚡ Ping WABA Microservice</button>
+          <div style="display:flex; gap:8px;">
+            <button class="action-btn-sm primary" onclick="pingMicroservice('Radd Gateway', 'radd-health')">⚡ Ping WABA Microservice</button>
+            <button class="action-btn-sm" style="background:#0284c7; color:#fff; border-color:#0284c7;" onclick="openProductionMetricsModal()">📊 Workspace Stats</button>
+          </div>
         </div>
         <div class="card card-highlight-purple">
           <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -1444,6 +1556,18 @@
             <td>⚠️ Third-party BSP markups</td>
             <td>✅ Direct BSP</td>
             <td style="background:#eff6ff; color:#047857; font-weight:700;">✅ Cloud API Tier 4 (Zero Ban Risk)</td>
+          </tr>
+          <tr onclick="highlightBenchmarkRow(this)" style="cursor:pointer;">
+            <td><strong>24/7 Shift & Agent Queue Management</strong></td>
+            <td>⚠️ Complex Enterprise add-on</td>
+            <td>⚠️ Basic online toggle</td>
+            <td style="background:#eff6ff; color:#047857; font-weight:700;">✅ Native Shift Management & Unattended Filters</td>
+          </tr>
+          <tr onclick="highlightBenchmarkRow(this)" style="cursor:pointer;">
+            <td><strong>Zero-Downtime Number Migration</strong></td>
+            <td>❌ Manual support ticket</td>
+            <td>⚠️ 2-5 days porting delay</td>
+            <td style="background:#eff6ff; color:#047857; font-weight:700;">✅ Automated WABA Migration Pipeline</td>
           </tr>
         </tbody>
       </table>
@@ -1684,30 +1808,40 @@
         <div style="font-size:0.9rem; color:#475569; margin-bottom:14px;">
           Live production architecture metrics across deployed <strong>Radd AI & Nerja AI</strong> multi-tenant clusters:
         </div>
-        <div class="exec-metric-grid">
+        <div class="exec-metric-grid" style="grid-template-columns: repeat(3, 1fr); gap: 10px;">
           <div class="exec-metric-card">
-            <div style="font-size:0.74rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">ACTIVE COMPANIES</div>
-            <div class="exec-metric-val" style="color:#2563eb;">713</div>
-            <div style="font-size:0.74rem; color:#059669; margin-top:2px;">↑ Verified Live Workspaces</div>
+            <div style="font-size:0.72rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">ACTIVE COMPANIES</div>
+            <div class="exec-metric-val" style="color:#2563eb; font-size:1.35rem;">713</div>
+            <div style="font-size:0.7rem; color:#059669; margin-top:2px;">↑ Verified Live Workspaces</div>
           </div>
           <div class="exec-metric-card">
-            <div style="font-size:0.74rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">WABA AVAILABILITY</div>
-            <div class="exec-metric-val" style="color:#059669;">99.98%</div>
-            <div style="font-size:0.74rem; color:#64748b; margin-top:2px;">Tier-4 Official Cloud API</div>
+            <div style="font-size:0.72rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">WABA AVAILABILITY</div>
+            <div class="exec-metric-val" style="color:#059669; font-size:1.35rem;">99.98%</div>
+            <div style="font-size:0.7rem; color:#64748b; margin-top:2px;">Tier-4 Official Cloud API</div>
           </div>
           <div class="exec-metric-card">
-            <div style="font-size:0.74rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">VERIFIED NEURALTAG EVENTS</div>
-            <div class="exec-metric-val" style="color:#7c3aed;">3,779+</div>
-            <div style="font-size:0.74rem; color:#64748b; margin-top:2px;">Production Store Events</div>
+            <div style="font-size:0.72rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">NEURALTAG SENSORS</div>
+            <div class="exec-metric-val" style="color:#7c3aed; font-size:1.35rem;">3,779+</div>
+            <div style="font-size:0.7rem; color:#64748b; margin-top:2px;">Live Storefront Events</div>
           </div>
           <div class="exec-metric-card">
-            <div style="font-size:0.74rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">MEDIAN ENGINE LATENCY</div>
-            <div class="exec-metric-val" style="color:#d97706;">16 ms</div>
-            <div style="font-size:0.74rem; color:#059669; margin-top:2px;">AWS ME-Central-1 (Riyadh)</div>
+            <div style="font-size:0.72rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">REGISTERED OPERATORS</div>
+            <div class="exec-metric-val" style="color:#0284c7; font-size:1.35rem;">91</div>
+            <div style="font-size:0.7rem; color:#64748b; margin-top:2px;">Multi-Agent Team Seats</div>
+          </div>
+          <div class="exec-metric-card">
+            <div style="font-size:0.72rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">CAMPAIGN DISPATCH</div>
+            <div class="exec-metric-val" style="color:#059669; font-size:1.35rem;">10k/min</div>
+            <div style="font-size:0.7rem; color:#059669; margin-top:2px;">Async Redis Queue Engine</div>
+          </div>
+          <div class="exec-metric-card">
+            <div style="font-size:0.72rem; font-weight:700; color:#64748b; font-family:var(--font-mono);">MEDIAN ENGINE LATENCY</div>
+            <div class="exec-metric-val" style="color:#d97706; font-size:1.35rem;">16 ms</div>
+            <div style="font-size:0.7rem; color:#059669; margin-top:2px;">AWS ME-Central (Riyadh)</div>
           </div>
         </div>
-        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:12px 14px; font-size:0.8rem; color:#475569;">
-          <strong>Deployment Ready for Hajj 2027:</strong> Zero database sharding bottlenecks; multi-tenant schema isolation tested with high-concurrency Saudi Mada checkout gateways.
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:12px 14px; font-size:0.8rem; color:#475569; margin-top:10px;">
+          <strong>Live Verified Feature Modules:</strong> Meta Embedded Signup, WABA Phone Number Migration, 24/7 Shift Coverage, Unattended Queue Filters, File Asset Manager, and Automated Post-Chat CSAT.
         </div>
       `;
       openExecModal({
@@ -1855,8 +1989,13 @@
     /* 5. Simulate Intent Capture (Real Website Sandbox Inside Modal) */
     function openIntentCaptureModal() {
       const bodyHtml = `
-        <div style="font-size:0.88rem; color:#475569; margin-bottom:12px;">
-          Interact with this <strong>Live Hajj & Umrah Storefront Sandbox</strong> below. Notice how hover gestures, hesitation, and cart clicks trigger immediate <strong>Nerja NeuralTag™</strong> telemetry!
+        <div style="font-size:0.86rem; color:#475569; margin-bottom:12px; display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            Interact with this <strong>Official Hajj & Umrah Storefront Portal</strong> below. Hovering packages or clicking booking actions generates real-time <strong>Nerja NeuralTag™</strong> behavioral telemetry.
+          </div>
+          <span style="font-family:var(--font-mono); font-size:0.74rem; background:#ecfdf5; color:#059669; padding:3px 10px; border-radius:6px; border:1px solid #a7f3d0; font-weight:700;">
+            ● DOM SENSOR V4.2 ACTIVE
+          </span>
         </div>
 
         <div class="website-mockup-browser">
@@ -1867,59 +2006,129 @@
               <span class="browser-dot" style="background:#10b981;"></span>
             </div>
             <div class="browser-url-bar">
-              <span>🔒</span>
-              <span>https://store.alharamain-hajj.sa/en/packages-2027</span>
-              <span style="margin-left:auto; color:#059669; font-weight:700;">● NeuralTag™ Active (12ms)</span>
+              <span style="color:#059669;">🔒</span>
+              <span style="font-weight:600; color:#0f172a;">https://store.alharamain-hajj.sa</span><span style="color:#64748b;">/en/packages-2027</span>
+              <span style="margin-left:auto; display:flex; align-items:center; gap:8px;">
+                <span style="color:#059669; font-weight:700; font-size:0.7rem;">● NerjaTag™ 12ms</span>
+                <span style="font-size:0.75rem;">🇸🇦 SAR</span>
+              </span>
             </div>
           </div>
           <div class="website-content-viewport">
             <div class="site-nav">
-              <div style="font-weight:800; font-size:1.05rem; color:#0f172a;">🕋 Al-Haramain Official Hajj Portal</div>
-              <div style="font-size:0.8rem; color:#64748b; font-family:var(--font-mono);">Tenant: #712-HAJJ</div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="font-size:1.4rem;">🕋</div>
+                <div>
+                  <div style="font-weight:800; font-size:0.95rem; color:#0f172a; line-height:1.2;">Al-Haramain Official Hajj Portal</div>
+                  <div style="font-size:0.72rem; color:#64748b; font-family:var(--font-mono);">Licensed by Ministry of Hajj & Umrah · License #1084-SA</div>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:10px;">
+                <span style="background:#eff6ff; color:#1d4ed8; font-size:0.72rem; font-weight:700; padding:4px 10px; border-radius:6px; border:1px solid #bfdbfe;">
+                  Vision 2030 Certified
+                </span>
+                <span style="background:#f1f5f9; color:#475569; font-size:0.72rem; font-family:var(--font-mono); padding:4px 10px; border-radius:6px;">
+                  Early Season 2027
+                </span>
+              </div>
             </div>
 
-            <div style="font-size:0.82rem; color:#64748b; margin-bottom:12px;">
-              Featured Hajj 2027 Packages & Services (Hover or Click to fire real DOM telemetry):
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:0.78rem; color:#64748b;">
+              <span>Hover cards to generate dwell telemetry; click to simulate cart reservation & instant WABA recovery:</span>
+              <span style="color:#2563eb; font-weight:600;">3 Premium Packages Available</span>
             </div>
 
             <div class="site-packages-grid">
-              <div class="package-card" id="pkg-card-1" onmouseenter="trackStorefrontHover('VIP Mina Camp Upgrade', 3500)" onclick="trackStorefrontClick('VIP Mina Camp Upgrade', 3500, this)">
-                <div style="font-size:1.3rem; margin-bottom:6px;">⛺</div>
-                <div style="font-weight:700; color:#0f172a; font-size:0.88rem;">VIP Mina Camp Tent</div>
-                <div style="font-size:0.75rem; color:#64748b; margin:4px 0 8px 0;">Zone 1 Proximity · Private Bath</div>
-                <div style="font-size:0.95rem; font-weight:800; color:#2563eb; font-family:var(--font-mono);">3,500 SAR</div>
-                <div style="margin-top:8px; font-size:0.72rem; color:#059669; font-weight:700;">Click to Inspect / Cart</div>
+              <!-- Package 1: Mina Camp -->
+              <div class="package-card" id="pkg-card-1" onmouseenter="trackStorefrontHover('VIP Mina Camp Upgrade (Zone 1)', 3500)" onclick="trackStorefrontClick('VIP Mina Camp Upgrade (Zone 1)', 3500, this)">
+                <div class="pkg-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=600&q=80" alt="VIP Mina Camp" loading="lazy">
+                  <span class="pkg-badge pkg-badge-vip">⭐ VIP CAMP · ZONE 1</span>
+                </div>
+                <div class="pkg-body">
+                  <div class="pkg-title">VIP Mina Camp Tent</div>
+                  <div class="pkg-sub">Direct Jamarat proximity with private climate-controlled en-suite amenities.</div>
+                  <ul class="pkg-features">
+                    <li>350m walk to Jamarat pedestrian ramp</li>
+                    <li>24/7 dedicated medical & buffet concierge</li>
+                    <li>Private en-suite sanitized bathroom</li>
+                  </ul>
+                  <div class="pkg-footer">
+                    <div>
+                      <div class="pkg-price">3,500 <span class="pkg-price-unit">SAR</span></div>
+                      <div style="font-size:0.68rem; color:#059669; font-weight:600;">4.9★ (312 reviews)</div>
+                    </div>
+                    <span class="pkg-action-hint">🛒 Inspect / Cart</span>
+                  </div>
+                </div>
               </div>
 
-              <div class="package-card" id="pkg-card-2" onmouseenter="trackStorefrontHover('Haram View Hotel Suite', 1850)" onclick="trackStorefrontClick('Haram View Hotel Suite', 1850, this)">
-                <div style="font-size:1.3rem; margin-bottom:6px;">🏨</div>
-                <div style="font-weight:700; color:#0f172a; font-size:0.88rem;">Haram View Suite</div>
-                <div style="font-size:0.75rem; color:#64748b; margin:4px 0 8px 0;">Clock Tower · 5 Nights</div>
-                <div style="font-size:0.95rem; font-weight:800; color:#2563eb; font-family:var(--font-mono);">1,850 SAR</div>
-                <div style="margin-top:8px; font-size:0.72rem; color:#059669; font-weight:700;">Click to Inspect / Cart</div>
+              <!-- Package 2: Haram View Hotel -->
+              <div class="package-card" id="pkg-card-2" onmouseenter="trackStorefrontHover('Haram View Hotel Suite (Clock Tower)', 1850)" onclick="trackStorefrontClick('Haram View Hotel Suite (Clock Tower)', 1850, this)">
+                <div class="pkg-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Haram View Suite" loading="lazy">
+                  <span class="pkg-badge" style="background:#2563eb;">🏨 HARAM VIEW</span>
+                </div>
+                <div class="pkg-body">
+                  <div class="pkg-title">Haram View Suite</div>
+                  <div class="pkg-sub">Executive 5-night stay overlooking the Holy Kaaba with executive lounge access.</div>
+                  <ul class="pkg-features">
+                    <li>Direct panoramic Kaaba & Mataf view</li>
+                    <li>Private elevator access to Holy Haram courtyard</li>
+                    <li>Complimentary Suhoor & Iftar buffet</li>
+                  </ul>
+                  <div class="pkg-footer">
+                    <div>
+                      <div class="pkg-price">1,850 <span class="pkg-price-unit">SAR / night</span></div>
+                      <div style="font-size:0.68rem; color:#059669; font-weight:600;">5.0★ (488 reviews)</div>
+                    </div>
+                    <span class="pkg-action-hint">🛒 Inspect / Cart</span>
+                  </div>
+                </div>
               </div>
 
-              <div class="package-card" id="pkg-card-3" onmouseenter="trackStorefrontHover('Premium Ihram & Kit', 240)" onclick="trackStorefrontClick('Premium Ihram & Kit', 240, this)">
-                <div style="font-size:1.3rem; margin-bottom:6px;">🛍️</div>
-                <div style="font-weight:700; color:#0f172a; font-size:0.88rem;">Pilgrim Ihram & Bag</div>
-                <div style="font-size:0.75rem; color:#64748b; margin:4px 0 8px 0;">Pure Cotton · Full Essentials</div>
-                <div style="font-size:0.95rem; font-weight:800; color:#2563eb; font-family:var(--font-mono);">240 SAR</div>
-                <div style="margin-top:8px; font-size:0.72rem; color:#059669; font-weight:700;">Click to Inspect / Cart</div>
+              <!-- Package 3: Pilgrim Kit -->
+              <div class="package-card" id="pkg-card-3" onmouseenter="trackStorefrontHover('Premium Pilgrim Ihram & Essentials Kit', 240)" onclick="trackStorefrontClick('Premium Pilgrim Ihram & Essentials Kit', 240, this)">
+                <div class="pkg-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&w=600&q=80" alt="Pilgrim Ihram & Bag" loading="lazy">
+                  <span class="pkg-badge" style="background:#059669;">🛍️ MERCHANDISE</span>
+                </div>
+                <div class="pkg-body">
+                  <div class="pkg-title">Pilgrim Ihram & Kit</div>
+                  <div class="pkg-sub">100% combed Egyptian organic cotton seamless towels & ergonomic belt kit.</div>
+                  <ul class="pkg-features">
+                    <li>Certified seamless 1400g Egyptian cotton</li>
+                    <li>Waterproof passport waist pouch & sandals</li>
+                    <li>Unscented organic soap & sun umbrella</li>
+                  </ul>
+                  <div class="pkg-footer">
+                    <div>
+                      <div class="pkg-price">240 <span class="pkg-price-unit">SAR</span></div>
+                      <div style="font-size:0.68rem; color:#059669; font-weight:600;">4.8★ (920 reviews)</div>
+                    </div>
+                    <span class="pkg-action-hint">🛒 Inspect / Cart</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div style="margin-top:14px; background:#0b1120; border:1px solid #1e293b; border-radius:10px; padding:12px 16px; font-family:var(--font-mono); font-size:0.76rem; color:#cbd5e1;">
-          <div style="color:#38bdf8; font-weight:700;">// LIVE DOM INTERCEPTOR LOG (NERJATAG STREAM):</div>
-          <div id="modal-live-dom-log" style="color:#34d399; margin-top:4px;">
-            [Ready] Hover over or click packages above to generate live DOM events...
+        <div style="margin-top:14px; background:#0b1120; border:1px solid #1e293b; border-radius:10px; padding:12px 16px; font-family:var(--font-mono); font-size:0.76rem; color:#cbd5e1; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #1e293b; padding-bottom:6px; margin-bottom:6px;">
+            <span style="color:#38bdf8; font-weight:700;">// LIVE DOM INTERCEPTOR LOG (NERJA NEURALTAG™ STREAM):</span>
+            <span style="color:#64748b; font-size:0.7rem;">BUFFER: 0 PENDING · 200 OK</span>
+          </div>
+          <div id="modal-live-dom-log" style="color:#34d399;">
+            [Ready] Move your mouse over packages or click "Inspect / Cart" to generate live DOM events...
           </div>
         </div>
 
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:14px;">
-          <span style="font-size:0.78rem; color:#64748b;">Telemetry feeds instantly into Radd WhatsApp WABA trigger engine.</span>
-          <button class="action-btn-sm" style="background:#7c3aed; color:#fff; border-color:#7c3aed;" onclick="closeExecModal(); updateSlide(4);">
+          <span style="font-size:0.78rem; color:#64748b;">
+            💡 DOM telemetry triggers proactive WABA recovery via Radd AI's multi-agent gateway.
+          </span>
+          <button class="action-btn-sm" style="background:#7c3aed; color:#fff; border-color:#7c3aed; padding:7px 16px; font-weight:700;" onclick="closeExecModal(); updateSlide(4);">
             ▶ Continue to WhatsApp Live Chat (Slide 5)
           </button>
         </div>
@@ -1928,9 +2137,9 @@
         icon: '🎯',
         theme: 'emerald',
         title: 'Nerja NeuralTag™ · Real Interactive Website Sandbox',
-        subtitle: 'Live DOM Interception & Real-Time Intent Capture Demo',
+        subtitle: 'Official Al-Haramain Storefront (Tenant #712-HAJJ) · Live DOM Interception',
         bodyHtml: bodyHtml,
-        statusText: 'STOREFRONT SANDBOX LIVE · CAPTURING DOM EVENTS',
+        statusText: 'STOREFRONT SANDBOX LIVE · CAPTURING HIGH-FIDELITY DOM EVENTS',
         chimeType: 'ping'
       });
     }
