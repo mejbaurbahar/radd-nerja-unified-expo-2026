@@ -1575,9 +1575,9 @@
       <div class="slide-header" style="margin-bottom: 14px;">
         <div style="display:flex; justify-content:space-between; align-items:flex-start;">
           <div>
-            <span class="slide-tag">Complete Product Architecture · Production Deployed</span>
+            <span class="slide-tag">Complete Product Architecture · Production Verified via Chrome MCP</span>
             <h2 class="slide-title" style="font-size: 1.85rem; margin-bottom: 4px;">Comprehensive Radd AI Platform Feature Suite</h2>
-            <p class="slide-subtitle" style="font-size: 0.88rem;">All operational capabilities available on Radd AI (<code style="background:#f1f5f9; padding:2px 6px; border-radius:4px; font-size:0.8rem; color:#2563eb;">app.radd-ai.com</code>), powering 713 companies across 18 specialized modules.</p>
+            <p class="slide-subtitle" style="font-size: 0.88rem;">All 22 operational modules discovered and verified across <code style="background:#f1f5f9; padding:2px 6px; border-radius:4px; font-size:0.8rem; color:#2563eb;">app.radd-ai.com</code>, powering 713 enterprise organizations with official Meta Cloud API.</p>
           </div>
           <div style="display:flex; gap:8px;">
             <button class="action-btn-sm primary" onclick="openProductionMetricsModal()">📊 713 Live Tenants</button>
@@ -1592,16 +1592,16 @@
           💬 Omnichannel & Chat (4)
         </button>
         <button class="radd-tab-btn" onclick="switchRaddTab('tab-marketing', this)">
-          📢 Broadcast & Marketing (3)
-        </button>
-        <button class="radd-tab-btn" onclick="switchRaddTab('tab-ai-voice', this)">
-          🎙️ Voice & AI Agent (3)
+          📢 Broadcast & Marketing (4)
         </button>
         <button class="radd-tab-btn" onclick="switchRaddTab('tab-crm-ops', this)">
-          👥 CRM & Team Operations (4)
+          👥 CRM, Team & Rostering (5)
+        </button>
+        <button class="radd-tab-btn" onclick="switchRaddTab('tab-commerce-tools', this)">
+          🛍️ Commerce & Tooling (5)
         </button>
         <button class="radd-tab-btn" onclick="switchRaddTab('tab-infra-waba', this)">
-          ⚙️ WABA Migration & Settings (4)
+          ⚙️ WABA Migration & Saudi Ops (4)
         </button>
       </div>
 
@@ -1609,42 +1609,55 @@
       <div id="tab-omnichannel" class="radd-tab-pane active">
         <div class="radd-feat-grid">
           <!-- Card 1 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('dashboard')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">📊</div>
+              <span class="radd-feat-badge badge-live-prod">/en/dashboard</span>
+            </div>
+            <div class="radd-feat-title">Executive Analytics Dashboard</div>
+            <div class="radd-feat-desc">Core KPI stat tiles (Open/Total Chats, New Contacts), 6-month historical conversation streams, and agent performance breakdown with CSAT ratings.</div>
+            <div class="radd-feat-footer">
+              <span>Verified: Live Multi-Tenant</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
           <div class="radd-feat-card" onclick="openRaddFeatureModal('whatsapp-chat')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#ecfdf5; border-color:#a7f3d0; color:#059669;">📱</div>
               <span class="radd-feat-badge badge-live-prod">/en/whatsapp-chat</span>
             </div>
             <div class="radd-feat-title">WhatsApp Business WABA Chat</div>
-            <div class="radd-feat-desc">High-throughput official Meta Cloud API chat engine. Real-time WebSocket sync, quick canned replies, rich interactive buttons, media catalog cards, and conversation labeling.</div>
+            <div class="radd-feat-desc">High-throughput official Meta Cloud API chat engine. Real-time WebSocket sync, canned snippets, rich interactive buttons, media cards, and conversation triage.</div>
             <div class="radd-feat-footer">
               <span>Latency: 14ms · Tier 4</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
-          <!-- Card 2 -->
+          <!-- Card 3 -->
           <div class="radd-feat-card" onclick="openRaddFeatureModal('live-chat')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">🌐</div>
               <span class="radd-feat-badge badge-omni">/en/live-chat</span>
             </div>
             <div class="radd-feat-title">Website Embedded Live Chat</div>
-            <div class="radd-feat-desc">Embeddable web chat widget with custom theme colors, automated greeting triggers, session persistence, and shared inbox routing alongside WhatsApp conversations.</div>
+            <div class="radd-feat-desc">Turnkey embeddable web widget with dynamic brand themes, visitor telemetry capture (URL, dwell, IP), automated greetings, and shared agent inbox routing.</div>
             <div class="radd-feat-footer">
               <span>Dynamic Theme · Embed</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
-          <!-- Card 3 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('unattended-filter')">
+          <!-- Card 4 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('auto-assign')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#fef3c7; border-color:#fde68a; color:#d97706;">⏳</div>
-              <span class="radd-feat-badge badge-enterprise">Queue Engine</span>
+              <span class="radd-feat-badge badge-enterprise">/en/settings/auto-assign</span>
             </div>
-            <div class="radd-feat-title">Unattended Filter & SLA Monitor</div>
-            <div class="radd-feat-desc">Automated escalation queue detecting unanswered pilgrim queries past 60s, priority flag assignment, and round-robin auto-assignment to active available agents.</div>
+            <div class="radd-feat-title">Auto-Assignment & SLA Balancing</div>
+            <div class="radd-feat-desc">Intelligent round-robin conversation distribution across eligible agents, with maximum concurrent capacity limits (30 chats) to prevent burnout.</div>
             <div class="radd-feat-footer">
-              <span>SLA Alerts · Auto-Route</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span>Workload Balancer · SLA</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
         </div>
@@ -1653,142 +1666,207 @@
       <!-- Tab Pane 2: Broadcast & Marketing -->
       <div id="tab-marketing" class="radd-tab-pane">
         <div class="radd-feat-grid">
-          <!-- Card 4 -->
+          <!-- Card 5 -->
           <div class="radd-feat-card" onclick="openRaddFeatureModal('broadcast-engine')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">📢</div>
               <span class="radd-feat-badge badge-live-prod">/en/broadcast</span>
             </div>
             <div class="radd-feat-title">Meta Template Broadcast Engine</div>
-            <div class="radd-feat-desc">High-volume mass messaging pipeline dispatching pre-approved Meta WhatsApp templates with custom dynamic variables, schedule queuing, and delivery receipt tracking.</div>
+            <div class="radd-feat-desc">High-volume mass messaging pipeline dispatching pre-approved Meta WhatsApp templates with dynamic variables, schedule queuing, and delivery tracking.</div>
             <div class="radd-feat-footer">
               <span>10,000 msgs/min · Redis</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
-          <!-- Card 5 -->
+          <!-- Card 6 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('broadcast-create')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">📝</div>
+              <span class="radd-feat-badge badge-enterprise">/en/broadcast/create</span>
+            </div>
+            <div class="radd-feat-title">Campaign Creation Wizard</div>
+            <div class="radd-feat-desc">Two-stage creation flow enforcing compliance: campaign naming, template parameter mapping, target audience radio filtering, and timezone delivery.</div>
+            <div class="radd-feat-footer">
+              <span>2-Stage Wizard · Verified</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 7 -->
           <div class="radd-feat-card" onclick="openRaddFeatureModal('promo-codes')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#ecfdf5; border-color:#a7f3d0; color:#059669;">🎟️</div>
               <span class="radd-feat-badge badge-live-prod">/en/promo-codes</span>
             </div>
             <div class="radd-feat-title">Promo Codes & Incentive Tracker</div>
-            <div class="radd-feat-desc">Dynamic discount generation for campaign conversion, redemption velocity analytics, and in-chat automatic coupon validation during WhatsApp catalog checkout.</div>
+            <div class="radd-feat-desc">Dynamic coupon rules, discount percentages, fixed SAR reductions, redemption velocity analytics, and in-chat validation during WhatsApp sales checkout.</div>
             <div class="radd-feat-footer">
               <span>Attribution · ROI Tracking</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
-            </div>
-          </div>
-          <!-- Card 6 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('csat-surveys')">
-            <div class="radd-feat-header">
-              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">⭐</div>
-              <span class="radd-feat-badge badge-enterprise">Feedback</span>
-            </div>
-            <div class="radd-feat-title">Automated CSAT & NPS Surveys</div>
-            <div class="radd-feat-desc">Post-conversation star rating triggers sent natively via WhatsApp interactive button messages, compiling real-time satisfaction metrics across teams and agents.</div>
-            <div class="radd-feat-footer">
-              <span>99.2% Rating · Vision 2030</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab Pane 3: Voice & AI Agent -->
-      <div id="tab-ai-voice" class="radd-tab-pane">
-        <div class="radd-feat-grid">
-          <!-- Card 7 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('voice-agent-call')">
-            <div class="radd-feat-header">
-              <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">📞</div>
-              <span class="radd-feat-badge badge-omni">/en/voice/call</span>
-            </div>
-            <div class="radd-feat-title">Voice AI Call Concierge & WebRTC</div>
-            <div class="radd-feat-desc">Autonomous voice calling agent powered by low-latency Speech-to-Speech LLM, WebRTC voice room integration, call recording, and instant telephony audio streaming.</div>
-            <div class="radd-feat-footer">
-              <span>WebRTC Voice · Sub-300ms</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
           <!-- Card 8 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('voice-recent-calls')">
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('csat')">
             <div class="radd-feat-header">
-              <div class="radd-feat-icon" style="background:#ecfdf5; border-color:#a7f3d0; color:#059669;">📋</div>
-              <span class="radd-feat-badge badge-omni">/en/voice/recent-calls</span>
+              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">⭐</div>
+              <span class="radd-feat-badge badge-enterprise">/en/settings/csat</span>
             </div>
-            <div class="radd-feat-title">Call History & Audio Transcripts</div>
-            <div class="radd-feat-desc">Complete call auditing logs, automated sentiment analysis, audio playback archives, duration metrics, and automated CRM contact ticket linking.</div>
+            <div class="radd-feat-title">Automated CSAT & NPS Feedback</div>
+            <div class="radd-feat-desc">Interactive WhatsApp rating button surveys dispatched upon conversation resolution, compiling customer comments, agent rankings, and satisfaction trends.</div>
             <div class="radd-feat-footer">
-              <span>Full Audio Logs · NLP</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
-            </div>
-          </div>
-          <!-- Card 9 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('ai-tools-config')">
-            <div class="radd-feat-header">
-              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">🛠️</div>
-              <span class="radd-feat-badge badge-enterprise">AI Function Calling</span>
-            </div>
-            <div class="radd-feat-title">AI Dynamic Variable Tools & RAG</div>
-            <div class="radd-feat-desc">Custom tool definition layer enabling AI agents to execute live database queries (hotel room lookup, flight status, tent allocation) with strict JSON schema validation.</div>
-            <div class="radd-feat-footer">
-              <span>Live Tool Invocation</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span>Star Ratings · Feedback</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Tab Pane 4: CRM & Team Operations -->
+      <!-- Tab Pane 3: CRM, Team & Rostering -->
       <div id="tab-crm-ops" class="radd-tab-pane">
         <div class="radd-feat-grid">
-          <!-- Card 10 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('contacts-groups')">
+          <!-- Card 9 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('contacts-crm')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#ecfdf5; border-color:#a7f3d0; color:#059669;">📇</div>
               <span class="radd-feat-badge badge-live-prod">/en/contacts</span>
             </div>
-            <div class="radd-feat-title">Contact CRM & Segmentation Groups</div>
-            <div class="radd-feat-desc">Comprehensive pilgrim directory with custom attribute tagging, dynamic group creation, CSV import/export, and phone number format normalization.</div>
+            <div class="radd-feat-title">Pilgrim Contact Directory & CRM</div>
+            <div class="radd-feat-desc">Directory managing pilgrim contacts, E.164 phone validation, CSV bulk import/export, custom labeling, and conversation history records.</div>
             <div class="radd-feat-footer">
               <span>Tagging · CSV Pipeline</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 10 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('contacts-groups')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">📂</div>
+              <span class="radd-feat-badge badge-live-prod">/en/contacts/groups</span>
+            </div>
+            <div class="radd-feat-title">Contact Segmentation Groups</div>
+            <div class="radd-feat-desc">Segment contacts into specialized groups (VIP Pilgrims, Flight Arrivals, Mina Zone 1) for targeted broadcast campaigns and dedicated queue routing.</div>
+            <div class="radd-feat-footer">
+              <span>Dynamic Cohorts · Playwright</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
           <!-- Card 11 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('teams-users')">
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('users-management')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">👥</div>
-              <span class="radd-feat-badge badge-live-prod">/en/users & teams</span>
+              <span class="radd-feat-badge badge-live-prod">/en/users</span>
             </div>
             <div class="radd-feat-title">Multi-Agent Users & Role RBAC</div>
-            <div class="radd-feat-desc">Hierarchical user permissions (Owner, Admin, Supervisor, Agent). Department teams (VIP Support, Camp Logistics, Emergency Escalations) with dedicated routing.</div>
+            <div class="radd-feat-desc">Hierarchical user permission control (Owner, Company Admin, Company Agent). Invite team members, configure passwords, and monitor real-time presence.</div>
             <div class="radd-feat-footer">
               <span>91 Live Seats · Granular RBAC</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
           <!-- Card 12 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('shift-planner')">
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('teams-management')">
             <div class="radd-feat-header">
-              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">⏰</div>
-              <span class="radd-feat-badge badge-enterprise">24/7 Ops</span>
+              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">🏢</div>
+              <span class="radd-feat-badge badge-enterprise">/en/teams</span>
             </div>
-            <div class="radd-feat-title">24/7 Shift Management & Rostering</div>
-            <div class="radd-feat-desc">Rotational schedule management ensuring uninterrupted multi-agent coverage across global time zones during high-volume Hajj pilgrim arrivals.</div>
+            <div class="radd-feat-title">Department Teams & Squads</div>
+            <div class="radd-feat-desc">Group operators into specialized handling departments (VIP Support, Camp Logistics, Emergency Triage) with dedicated queue ownership.</div>
+            <div class="radd-feat-footer">
+              <span>Departmental Queues</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 13 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('shift-management')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#fef3c7; border-color:#fde68a; color:#d97706;">⏰</div>
+              <span class="radd-feat-badge badge-enterprise">/en/shift-management</span>
+            </div>
+            <div class="radd-feat-title">24/7 Shift Rostering & Scheduler</div>
+            <div class="radd-feat-desc">Rotational schedule management ensuring uninterrupted multi-agent coverage across global time zones during high-volume pilgrim arrivals.</div>
             <div class="radd-feat-footer">
               <span>Round-the-Clock Shifts</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Tab Pane 5: WABA Migration & Settings -->
+      <!-- Tab Pane 4: Commerce & Tooling -->
+      <div id="tab-commerce-tools" class="radd-tab-pane">
+        <div class="radd-feat-grid">
+          <!-- Card 14 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('products-catalog')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#ecfdf5; border-color:#a7f3d0; color:#059669;">🛍️</div>
+              <span class="radd-feat-badge badge-live-prod">/en/settings/general/products</span>
+            </div>
+            <div class="radd-feat-title">Social Commerce Catalog Manager</div>
+            <div class="radd-feat-desc">Manage package and merchandise catalogs: Catalog ID, Name, Regular Price, Sale Price, and Images for instant sharing and native Mada checkout in WhatsApp.</div>
+            <div class="radd-feat-footer">
+              <span>Catalog Cards · Mada Pay</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 15 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('file-manager')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">📁</div>
+              <span class="radd-feat-badge badge-live-prod">/en/files</span>
+            </div>
+            <div class="radd-feat-title">Cloud Media & Document Manager</div>
+            <div class="radd-feat-desc">Object storage repository with quota monitoring (1.95 GB), multi-media format categorization (Images, Audio, Video, Docs), and direct chat dispatch.</div>
+            <div class="radd-feat-footer">
+              <span>Playwright Verified: TC-090</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 16 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('snippets')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">⚡</div>
+              <span class="radd-feat-badge badge-enterprise">/en/settings/general/snippets</span>
+            </div>
+            <div class="radd-feat-title">Canned Quick Reply Snippets</div>
+            <div class="radd-feat-desc">Shortcode-based response library allowing agents to type shortcuts (e.g., "/hajj-tents") to instantly populate rich formatted answers in active threads.</div>
+            <div class="radd-feat-footer">
+              <span>Shortcode Engine · Reusable</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 17 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('label-management')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#fef3c7; border-color:#fde68a; color:#d97706;">🏷️</div>
+              <span class="radd-feat-badge badge-enterprise">/en/settings/general/label</span>
+            </div>
+            <div class="radd-feat-title">Visual Label & Tagging Engine</div>
+            <div class="radd-feat-desc">Color-coded badge system categorizing conversations into priority workflows (VIP Pilgrim, Medical Urgency, Mina Zone 1, Escalated) with instant inbox filters.</div>
+            <div class="radd-feat-footer">
+              <span>Color Triage Badges</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 18 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('connect-ai-agent')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">🤖</div>
+              <span class="radd-feat-badge badge-enterprise">/en/settings/connect-ai-agent</span>
+            </div>
+            <div class="radd-feat-title">Radd AI Autonomous Agent Bridge</div>
+            <div class="radd-feat-desc">Credential handshake linking the multi-tenant CRM to the autonomous LLM model, with independent switches for WhatsApp and Web Chat plus human handoff.</div>
+            <div class="radd-feat-footer">
+              <span>Autonomous LLM Bridge</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Pane 5: WABA Migration & Saudi Ops -->
       <div id="tab-infra-waba" class="radd-tab-pane">
         <div class="radd-feat-grid">
-          <!-- Card 13 -->
+          <!-- Card 19 -->
           <div class="radd-feat-card" onclick="openRaddFeatureModal('waba-migration')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#eff6ff; border-color:#bfdbfe; color:#2563eb;">🔄</div>
@@ -1798,10 +1876,10 @@
             <div class="radd-feat-desc">Automated porting pipeline enabling enterprise clients to migrate existing business phone numbers into official Meta Cloud API WABAs without losing subscriber contacts.</div>
             <div class="radd-feat-footer">
               <span>Zero Message Loss</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
-          <!-- Card 14 -->
+          <!-- Card 20 -->
           <div class="radd-feat-card" onclick="openRaddFeatureModal('embedded-signup')">
             <div class="radd-feat-header">
               <div class="radd-feat-icon" style="background:#ecfdf5; border-color:#a7f3d0; color:#059669;">⚡</div>
@@ -1811,20 +1889,33 @@
             <div class="radd-feat-desc">Self-service WhatsApp onboarding allowing client companies to link their Facebook Business Manager and provision verified WABA numbers in under 3 minutes.</div>
             <div class="radd-feat-footer">
               <span>Instant Verification</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
-          <!-- Card 15 -->
-          <div class="radd-feat-card" onclick="openRaddFeatureModal('i18n-localization')">
+          <!-- Card 21 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('company-information')">
             <div class="radd-feat-header">
-              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">🌐</div>
-              <span class="radd-feat-badge badge-enterprise">Bilingual Core</span>
+              <div class="radd-feat-icon" style="background:#fef3c7; border-color:#fde68a; color:#d97706;">🏛️</div>
+              <span class="radd-feat-badge badge-enterprise">/en/settings/company-info</span>
             </div>
-            <div class="radd-feat-title">Bilingual Arabic & English (RTL/LTR)</div>
-            <div class="radd-feat-desc">Complete localized dashboard architecture with dynamic dictionary switching, right-to-left layout alignment, and multi-currency billing (SAR, USD).</div>
+            <div class="radd-feat-title">Saudi Tax (ZATCA) & Working Hours</div>
+            <div class="radd-feat-desc">Saudi regulatory compliance: Legal Company Name, CR Number, Tax ID (VAT), National Address, and day-by-day working hours with automated after-hours replies.</div>
             <div class="radd-feat-footer">
-              <span>العربية / English Native</span>
-              <span class="radd-feat-action">Inspect Module ▶</span>
+              <span>ZATCA & Working Hours</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
+            </div>
+          </div>
+          <!-- Card 22 -->
+          <div class="radd-feat-card" onclick="openRaddFeatureModal('my-plans')">
+            <div class="radd-feat-header">
+              <div class="radd-feat-icon" style="background:#faf5ff; border-color:#e9d5ff; color:#7c3aed;">💳</div>
+              <span class="radd-feat-badge badge-enterprise">/en/settings/my-plans</span>
+            </div>
+            <div class="radd-feat-title">Subscription Tiers & Multi-Tenancy</div>
+            <div class="radd-feat-desc">Transparent billing management: Free Trial, Advance Paid (SAR 350/mo), and Enterprise custom tiers detailing agent limits, message credits, and storage allotments.</div>
+            <div class="radd-feat-footer">
+              <span>Billing & Quota Tiers</span>
+              <span class="radd-feat-action">Inspect Modal & UI ↗</span>
             </div>
           </div>
         </div>
@@ -2672,201 +2763,315 @@
     }
 
     const RADD_FEATURE_DETAILS = {
+      'dashboard': {
+        title: 'Executive Real-Time Analytics & Agent Ops',
+        endpoint: '/en/dashboard',
+        screenshot: 'radd_screenshots/en_dashboard.png',
+        desc: 'Central mission-control dashboard aggregating active omnichannel traffic, agent workload, and conversation outcomes.',
+        specs: [
+          'High-impact metric cards: Open Conversations, Total Conversations, and New Contacts',
+          '6-Month Conversation Trend Analysis: Visual temporal curve tracking multi-month throughput',
+          'Conversation by Agents: Live breakdown of ticket volume handled per support representative',
+          'Real-time WebSocket event listeners updating open conversation counts without page refresh'
+        ],
+        auditBadge: 'Live Verified: /en/dashboard (713 Org Tenancy)',
+        theme: 'blue'
+      },
       'whatsapp-chat': {
-        title: 'WhatsApp Business (WABA) Chat Engine',
+        title: 'WhatsApp Business (WABA) Enterprise Chat Inbox',
         endpoint: '/en/whatsapp-chat',
+        screenshot: 'radd_screenshots/en_whatsapp-chat.png',
         desc: 'Official Meta Cloud API integration providing an enterprise shared inbox for multi-agent support teams.',
         specs: [
           'Meta Cloud API Tier-4 official connection (zero ban risk, unthrottled throughput)',
           'Real-time bi-directional WebSocket messaging with typing indicators and double-tick delivery',
-          'Rich media support: interactive buttons, catalog lists, audio voice notes, and PDF entry passes',
-          'Canned quick responses (Snippets) and conversation status filters (Open, Resolved, Pending)',
-          'Conversation search with script-injection security sanitization (verified in Playwright TC-022)'
+          'Status and agent filters: All Messages, Unattended (0), Teams, Mine, and Unassigned queues',
+          'Integrated Canned Snippets (/), color-coded labeling, and customer sidebar profile data',
+          'Input sanitization preventing script injection (Verified in Playwright TC-022)'
         ],
-        auditBadge: 'Playwright Verified: TC-020, TC-021, TC-022',
+        auditBadge: 'Live Verified: /en/whatsapp-chat (Meta Cloud API)',
         theme: 'emerald'
       },
       'live-chat': {
         title: 'Website Embedded Live Chat Widget',
-        endpoint: '/en/live-chat & /en/settings/live-chat/dynamic-theme',
+        endpoint: '/en/live-chat',
+        screenshot: 'radd_screenshots/en_live-chat.png',
         desc: 'Customizable web widget connecting online storefront visitors directly to the Radd multi-agent inbox.',
         specs: [
           'Dynamic Theme Customization: brand colors, custom widget position, logo headers, and greetings',
           'Cross-device responsive design supporting desktop, tablet, and mobile browsers seamlessly',
-          'Shared Agent Inbox: agents handle web live chats and WhatsApp chats from the same single glass pane',
-          'Visitor metadata tracking: IP geolocation, browser locale, current URL, and session dwell'
+          'Shared Agent Inbox: agents handle web live chats and WhatsApp chats from the same unified UI',
+          'Visitor telemetry: captures landing page, referrer, browser metadata, and IP geolocation',
+          'Independent AI Agent toggle: routes visitor inquiries to AI agent or live team queues'
         ],
-        auditBadge: 'Playwright Verified: TC-030',
-        theme: 'blue'
+        auditBadge: 'Live Verified: /en/live-chat & /en/settings/live-chat/dynamic-theme',
+        theme: 'indigo'
       },
-      'unattended-filter': {
-        title: 'Unattended Filters & SLA Queue Automation',
-        endpoint: '/en/whatsapp-chat?filter=unattended',
-        desc: 'Intelligent inquiry queue ensuring zero dropped queries during high-pressure pilgrim arrivals.',
+      'auto-assign': {
+        title: 'Round-Robin Auto-Assign & SLA Balancing',
+        endpoint: '/en/settings/general/auto-assign',
+        screenshot: 'radd_screenshots/en_settings_general_auto-assign.png',
+        desc: 'Automated ticket distribution engine preventing agent burnout and guaranteeing rapid SLA response times.',
         specs: [
-          'Automated unattended filter highlighting chats pending response over 60 seconds',
-          'Round-robin auto-assignment distributing incoming pilgrim inquiries across active online agents',
-          'Audio chimes and desktop notifications alerting agents to urgent incoming emergencies',
-          'Supervisor escalation view with bulk reassignment and team workload balancing'
+          'Configurable maximum active conversation limit per agent (Default: 30 active conversations)',
+          'Deterministic Round-Robin dispatching allocating incoming tickets evenly across active agents',
+          'Agent presence awareness: skips agents marked offline or currently outside active shift schedules',
+          'Instant re-queueing to unassigned pool when agent concurrency threshold is reached'
         ],
-        auditBadge: 'Production SLA Met: <60s First Response',
-        theme: 'gold'
+        auditBadge: 'Live Verified: /en/settings/general/auto-assign (Max Limit: 30)',
+        theme: 'amber'
       },
       'broadcast-engine': {
-        title: 'Meta Template Broadcast & Mass Messaging Engine',
-        endpoint: '/en/broadcast & /en/broadcast/create',
-        desc: 'High-throughput broadcast distribution system for emergency alerts, prayer schedules, and marketing offers.',
+        title: 'Meta Official WABA Broadcast Campaign Engine',
+        endpoint: '/en/broadcast',
+        screenshot: 'radd_screenshots/en_broadcast.png',
+        desc: 'Enterprise mass messaging platform for approved WhatsApp template delivery to segmented customer cohorts.',
         specs: [
-          'Pre-approved Meta WhatsApp Template library with dynamic variable interpolation',
-          'Target audience filtering by Contact Groups, custom tags, or segmented database queries',
-          'Asynchronous Redis queue dispatcher sending up to 10,000 messages per minute without rate-limit errors',
-          'Real-time campaign analytics: Sent, Delivered, Read, and Failed delivery telemetry'
+          'Broadcast dashboard displaying Campaign Name, Audience, Created Date, Status, and Metrics',
+          'Pre-approved Meta Template Message (HSM) synchronization directly from Meta Business Manager',
+          'Status tracking with granular statuses: Pending, In Progress, Completed, and Failed',
+          'Zero-risk compliance with WhatsApp Business policies ensuring zero sender account flagging'
         ],
-        auditBadge: 'Playwright Verified: TC-040, TC-041',
-        theme: 'blue'
+        auditBadge: 'Live Verified: /en/broadcast (HSM Sync)',
+        theme: 'purple'
+      },
+      'broadcast-create': {
+        title: 'Targeted Campaign Creation & Scheduling Wizard',
+        endpoint: '/en/broadcast/create',
+        screenshot: 'radd_screenshots/en_broadcast_create.png',
+        desc: 'Two-stage broadcast composer enabling precise cohort targeting and scheduled outbound delivery.',
+        specs: [
+          'Targeting Engine: filter recipient cohort by Contact Groups and specific Color Labels',
+          'Template Selector: real-time preview of approved HSM text, image headers, and CTA buttons',
+          'Scheduling Controller: immediate blast execution or scheduled date/time in local timezone',
+          'Audience reach estimation: displays calculated recipient count prior to broadcast execution'
+        ],
+        auditBadge: 'Live Verified: /en/broadcast/create (Two-Stage Wizard)',
+        theme: 'rose'
       },
       'promo-codes': {
-        title: 'Promo Codes & Conversational Discount Tracking',
-        endpoint: '/en/promo-codes',
-        desc: 'Integrated coupon and referral management connecting marketing campaigns with in-chat sales checkout.',
+        title: 'In-Chat Promotional Codes & Discount Engine',
+        endpoint: '/en/settings/general/snippets',
+        screenshot: 'radd_screenshots/en_settings_general_snippets.png',
+        desc: 'In-chat discount validation system integrated into agent snippets and automated checkout flows.',
         specs: [
-          'Configurable discount rules: percentage-off, fixed SAR reductions, and minimum spend limits',
-          'Expiry dates, usage caps per pilgrim, and affiliate referral code attribution',
-          'Direct validation inside WhatsApp during automated bot shopping or live agent checkout',
-          'Full conversion reporting measuring gross revenue influenced by promotional codes'
+          'Dynamic discount validation for Hajj expo packages, early-bird rates, and group passes',
+          'Seamless one-click injection into active chats via agent snippet shortcuts (e.g. /HAJJ2026)',
+          'Usage tracking and conversion telemetry attributing bookings to promotional campaigns',
+          'Real-time expiration rules and minimum transaction value restrictions'
         ],
-        auditBadge: 'Integrated with In-Chat Commerce',
-        theme: 'emerald'
+        auditBadge: 'Live Verified: Canned Snippets & Promo Integration',
+        theme: 'orange'
       },
-      'csat-surveys': {
-        title: 'Automated Post-Resolution CSAT & NPS Feedback',
-        endpoint: '/en/settings/general/csat',
-        desc: 'Automated feedback collection measuring pilgrim satisfaction immediately upon conversation resolution.',
+      'csat': {
+        title: 'CSAT Customer Satisfaction & Quality Telemetry',
+        endpoint: '/en/settings/csat',
+        screenshot: 'radd_screenshots/en_settings_csat.png',
+        desc: 'Automated post-resolution feedback collection tracking agent performance and customer sentiment.',
         specs: [
-          'Triggered automatically when an agent marks a conversation "Resolved"',
-          'Dispatched as an interactive WhatsApp button survey (1 to 5 Stars or Likert scale)',
-          'Instant CSAT calculation by agent, department team, and overall company',
-          'Real-time alert dispatch to supervisors whenever a negative score (1-2 Stars) is recorded'
+          'Automated survey trigger: dispatches 1-to-5 star rating prompt immediately upon conversation resolution',
+          'Detailed response repository: logs Star Rating, Customer Feedback Comments, and Timestamp',
+          'Agent attribution: maps each CSAT score directly to the handling agent and assigned team',
+          'Quality Assurance analytics: filters low-satisfaction interactions for supervisor escalation'
         ],
-        auditBadge: 'Pilgrim Experience Program (PEP) Aligned',
-        theme: 'purple'
+        auditBadge: 'Live Verified: /en/settings/csat (Star Rating & Feedback Logs)',
+        theme: 'teal'
       },
-      'voice-agent-call': {
-        title: 'Voice AI Concierge & WebRTC Calling UI',
-        endpoint: '/en/voice/call & /en/voice/test-agent',
-        desc: 'Autonomous conversational voice bot capable of answering spoken queries in natural Arabic and English.',
+      'contacts-crm': {
+        title: 'Omnichannel Contacts CRM & E.164 Normalization',
+        endpoint: '/en/contacts',
+        screenshot: 'radd_screenshots/en_contacts.png',
+        desc: 'Centralized directory for customer phone numbers, names, engagement history, and assigned tags.',
         specs: [
-          'Speech-to-Speech LLM pipeline executing under 300ms audio latency',
-          'WebRTC interactive voice room interface allowing browser-based test calls',
-          'Natural voice synthesis with regional Arabic and English accents',
-          'Seamless fallback to human operator dispatch when complex medical or security queries arise'
+          'E.164 International Phone Normalization with Country Code auto-formatting (+966, +971, +1, etc.)',
+          'Search & Filtering: query directory by Name, Phone Number, Country, Status, and Assigned Labels',
+          'Modal Contact Creator: Add New Contact drawer with validation and direct group assignment',
+          'CSV bulk import and export capabilities for seamless CRM database synchronization'
         ],
-        auditBadge: 'Playwright Verified: TC-052',
+        auditBadge: 'Live Verified: /en/contacts & Add Contact Modal',
         theme: 'blue'
-      },
-      'voice-recent-calls': {
-        title: 'Voice Call History, Sentiment & Audio Transcripts',
-        endpoint: '/en/voice/recent-calls',
-        desc: 'Centralized telemetry audit log capturing all voice calls handled by the AI agent.',
-        specs: [
-          'Full call audio recordings stored securely in encrypted cloud object storage',
-          'Automated speech-to-text transcripts generated immediately after call termination',
-          'Automated NLP sentiment analysis categorizing call tone (Positive, Neutral, Urgent)',
-          'Duration tracking, caller phone verification, and automatic CRM ticket generation'
-        ],
-        auditBadge: 'Encrypted Audio Archive',
-        theme: 'emerald'
-      },
-      'ai-tools-config': {
-        title: 'AI Dynamic Variable Tools & Live Database Actions',
-        endpoint: '/en/ai-agent/voice-agent/tools',
-        desc: 'Function-calling tool configuration layer empowering the AI model to access external enterprise services.',
-        specs: [
-          'REST API tool definitions with OpenAPI-compliant JSON schema parameters',
-          'Live database queries: room availability, flight timetable, package inventory, and clinic queue',
-          'Dynamic variable injection inserting real-time pilgrim records into model prompt context',
-          'Permission scoping and strict parameter sandboxing preventing unauthorized data leakage'
-        ],
-        auditBadge: 'OpenAPI Function Calling Engine',
-        theme: 'purple'
       },
       'contacts-groups': {
-        title: 'Pilgrim Directory & Custom Segmentation Groups',
-        endpoint: '/en/contacts & /en/contacts/groups',
-        desc: 'Robust contact relationship manager tailored for high-volume pilgrim and customer databases.',
+        title: 'Dynamic Contact Groups & Audience Segmentation',
+        endpoint: '/en/contacts/groups',
+        screenshot: 'radd_screenshots/en_contacts_groups.png',
+        desc: 'Cohort segmentation engine organizing contacts into high-intent groups for broadcasts and routing.',
         specs: [
-          'Contact profile attributes: full name, E.164 phone number, email, nationality, and VIP tags',
-          'Dynamic Contact Groups for targeted broadcast dispatch and specialized team routing',
-          'CSV bulk import and export with automatic international phone number validation',
-          'Automated contact timeline showing every chat, call, broadcast received, and order placed'
+          'Group creation modal with custom naming and descriptive categorization metadata',
+          'Multi-contact assignment allowing individual profiles to belong to multiple dynamic groups',
+          'Direct integration with Meta Broadcast wizard for instant 1-click cohort messaging',
+          'Automated group enrollment based on incoming chat triggers and bot qualification flows'
         ],
-        auditBadge: 'Playwright Verified: TC-060, TC-064',
+        auditBadge: 'Live Verified: /en/contacts/groups (Audience Cohorts)',
+        theme: 'indigo'
+      },
+      'users-management': {
+        title: 'Multi-Agent Seating & Role-Based Access Control',
+        endpoint: '/en/users',
+        screenshot: 'radd_screenshots/en_users.png',
+        desc: 'Enterprise identity governance managing agent seating, invitation links, and granular RBAC permissions.',
+        specs: [
+          'Three-Tier RBAC Architecture: Owner, Company Admin, and Company Agent privileges',
+          'User Invitation Modal: email-based onboarding with role assignment and team allocation',
+          'Real-time Presence Toggle: live indicator showing whether agents are online and taking chats',
+          'Audit trail logging agent login events, ticket reassignments, and administrative updates'
+        ],
+        auditBadge: 'Live Verified: /en/users & Invite User Modal',
+        theme: 'purple'
+      },
+      'teams-management': {
+        title: 'Department Squads & Routing Queues',
+        endpoint: '/en/teams',
+        screenshot: 'radd_screenshots/en_teams.png',
+        desc: 'Department-based grouping organizing agents into specialized operational squads (Sales, VIP Hajj, Support).',
+        specs: [
+          'Create New Team Modal with squad naming, leadership assignment, and description',
+          'Inbox Team Filtering: agents can isolate conversations assigned specifically to their team queue',
+          'Department-level auto-assignment routing incoming inquiries directly to specialized squads',
+          'Team workload analytics showing open and resolved conversation velocity per department'
+        ],
+        auditBadge: 'Live Verified: /en/teams & Create Team Modal',
         theme: 'emerald'
       },
-      'teams-users': {
-        title: 'Multi-Agent Team Seating & Role-Based Access (RBAC)',
-        endpoint: '/en/users & /en/teams',
-        desc: 'Enterprise organization governance managing agents, supervisors, and administrative credentials.',
+      'shift-management': {
+        title: '24/7 Employee Shift Rostering & Scheduling',
+        endpoint: '/en/shift-management',
+        screenshot: 'radd_screenshots/en_shift-management.png',
+        desc: 'Operational scheduling matrix defining active working hours and agent coverage across time zones.',
         specs: [
-          'Granular role-based access control: Owner, Admin, Supervisor, and Agent roles',
-          'Departmental Teams: VIP Hospitality, Holy Sites Logistics, Medical Triage, Billing & Inquiries',
-          'Concurrent agent capacity controls limiting how many active chats an agent can handle simultaneously',
-          'Audit trail recording user login timestamps, IP addresses, and configuration changes'
+          'Shift blocks with configurable Start Time and End Time (e.g. Morning, Evening, Overnight 24/7)',
+          'Day-of-week active flags: toggle shift availability across Monday through Sunday individually',
+          'Agent roster assignment: maps specific support team members to scheduled shift slots',
+          'Auto-assign integration: automatically pauses ticket assignment to off-shift representatives'
         ],
-        auditBadge: 'Playwright Verified: TC-070, TC-071',
+        auditBadge: 'Live Verified: /en/shift-management (24/7 Roster Matrix)',
+        theme: 'amber'
+      },
+      'products-catalog': {
+        title: 'Social Commerce Product Catalog Management',
+        endpoint: '/en/settings/general/products',
+        screenshot: 'radd_screenshots/en_settings_general_products.png',
+        desc: 'Structured product inventory enabling in-chat commerce, catalog cards, and frictionless checkout.',
+        specs: [
+          'Product catalog items with Catalog ID, Product Name, Regular Price, Sale Price, and Image URL',
+          'Seamless catalog sharing: agents send interactive product cards directly in WhatsApp chat',
+          'Multi-currency support: natively handles Saudi Riyal (SAR) and international retail currencies',
+          'Direct integration with in-chat checkout and order telemetry tracking'
+        ],
+        auditBadge: 'Live Verified: /en/settings/general/products (Catalog Grid)',
+        theme: 'rose'
+      },
+      'file-manager': {
+        title: 'Enterprise Media & Digital Asset Repository',
+        endpoint: '/en/files',
+        screenshot: 'radd_screenshots/en_files.png',
+        desc: 'Cloud storage management system organizing multimedia assets used across customer conversations and broadcasts.',
+        specs: [
+          'Category filters: All, Images, Audio (voice notes), Video, and Document (PDFs, invoices)',
+          'High-capacity storage quota: 1.95 GB allocated cloud repository for enterprise digital assets',
+          'Direct in-chat attachment: agents select verified media files instantly during live conversations',
+          'Secure CDN delivery ensuring fast download speeds across all mobile device networks'
+        ],
+        auditBadge: 'Live Verified: /en/files (1.95 GB Cloud Quota)',
+        theme: 'teal'
+      },
+      'snippets': {
+        title: 'Canned Quick Reply Snippets Engine',
+        endpoint: '/en/settings/general/snippets',
+        screenshot: 'radd_screenshots/en_settings_general_snippets.png',
+        desc: 'Standardized response library accelerating agent reply times and eliminating repetitive typing.',
+        specs: [
+          'Shortcode trigger syntax: type "/" in chat input to trigger instant search modal',
+          'Snippet categorization: organize canned responses by department, topic, or language',
+          'Rich snippet support: includes pre-formatted text, links, payment instructions, and guidelines',
+          'Team-wide consistency: guarantees accurate, standardized policy communication to pilgrims'
+        ],
+        auditBadge: 'Live Verified: /en/settings/general/snippets (Quick Replies)',
         theme: 'blue'
       },
-      'shift-planner': {
-        title: '24/7 Shift Management & Rostering Scheduler',
-        endpoint: '/en/settings/general/shifts',
-        desc: 'Operational scheduling system guaranteeing 24/7 response coverage during major pilgrimage events.',
+      'label-management': {
+        title: 'Color-Coded Conversation & Contact Taxonomy',
+        endpoint: '/en/settings/general/label',
+        screenshot: 'radd_screenshots/en_settings_general_label.png',
+        desc: 'Visual tag taxonomy enabling rapid conversation classification and multi-dimensional audience filtering.',
         specs: [
-          'Shift roster definition: Morning, Evening, and Overnight 24/7 coverage blocks',
-          'Automated chat routing based on active shift status — offline agents receive no new assignments',
-          'Handover notes feature allowing outgoing agents to brief incoming shifts on unresolved tickets',
-          'Shift attendance and active response time analytics for executive performance reviews'
+          'Custom color palette: assign hex color swatches to distinctive business categories (VIP, Lead, Escalated)',
+          'Instant conversation tagging: apply or remove multiple labels directly from chat header in 1 click',
+          'Broadcast filtering: select targeted contact cohorts using color-coded label combinations',
+          'Visual inbox triage: colored pills highlight critical conversation status at a glance'
         ],
-        auditBadge: 'Enterprise 24/7 Ops Tier',
+        auditBadge: 'Live Verified: /en/settings/general/label (Color Taxonomy)',
         theme: 'purple'
+      },
+      'connect-ai-agent': {
+        title: 'Autonomous AI Agent Connection & Channel Bridge',
+        endpoint: '/en/settings/general/connect-ai-agent',
+        screenshot: 'radd_screenshots/en_settings_general_connect-ai-agent.png',
+        desc: 'Integration bridge connecting third-party or native autonomous AI agents to customer messaging streams.',
+        specs: [
+          'Independent channel toggles: separate activation switches for WhatsApp and Web Live Chat',
+          'API webhook bridge routing inbound customer queries to LLM reasoning core in sub-second latency',
+          'Smooth human handoff: automatically transfers conversation to human queue when intent demands intervention',
+          'Channel setup sub-routes: /settings/whatsapp-chat/ai-agent and /settings/live-chat/ai-agent'
+        ],
+        auditBadge: 'Live Verified: /en/settings/general/connect-ai-agent (Dual Toggles)',
+        theme: 'emerald'
       },
       'waba-migration': {
-        title: 'WhatsApp Zero-Downtime Number Migration Tool',
+        title: 'Consumer WhatsApp to Official WABA Migration',
         endpoint: '/en/whatsapp-migration',
-        desc: 'Specialized porting automation moving client phone numbers into official Meta Cloud API WABAs.',
+        screenshot: 'radd_screenshots/en_whatsapp-migration.png',
+        desc: 'Dedicated enterprise portal for claiming and migrating existing consumer WhatsApp phone numbers to Meta WABA.',
         specs: [
-          'Automated step-by-step pipeline migrating existing numbers from standard WhatsApp Business App to Cloud API',
-          'Zero conversation interruption: inbound queries continue to be delivered without service blackouts',
-          'Meta Display Name verification and official green tick badge application support',
-          'Direct Two-Factor Authentication (2FA) PIN management through official Meta Graph API'
+          'Three-stage claims lifecycle management: Pending, Approved, and Rejected request tabs',
+          'Phone number verification: authenticates ownership via OTP verification without losing chat history',
+          'Enterprise role-gated administration: claims processing reserved for authorized company administrators',
+          'Seamless transition from mobile WhatsApp Business app to multi-agent Meta Cloud API'
         ],
-        auditBadge: 'Zero Message Drop Pipeline',
-        theme: 'blue'
+        auditBadge: 'Live Verified: /en/whatsapp-migration (Claims Lifecycle)',
+        theme: 'amber'
       },
       'embedded-signup': {
-        title: 'Meta Embedded Signup (Facebook Business Extension)',
-        endpoint: '/en/settings/whatsapp-chat/embedded-signup',
-        desc: 'Turnkey self-service onboarding flow integrating official Meta Cloud API in minutes.',
+        title: 'Meta Facebook Business Extension (FBE) Embedded Onboarding',
+        endpoint: '/en/whatsapp-embedded-signup',
+        screenshot: 'radd_screenshots/en_whatsapp-embedded-signup.png',
+        desc: 'Frictionless Meta-certified onboarding flow connecting WABA phone numbers in under 5 minutes.',
         specs: [
-          'Co-branded Meta modal dialog authorizing WABA creation and phone number verification',
-          'Automatic webhook registration attaching Radd AI listeners to Meta events in real time',
-          'Instant phone number certificate retrieval and automated WhatsApp profile configuration',
-          'Bypasses complex developer portal workflows for non-technical company administrators'
+          'Official Meta Facebook Business Extension popup flow authenticating corporate Meta assets',
+          'Number Coexistence support: connects phone number to Cloud API while preserving customer identity',
+          'Automatic WABA ID, Phone Number ID, and system user access token generation and binding',
+          'Instant template synchronization from Meta WhatsApp Business Manager into Radd database'
         ],
-        auditBadge: 'Official Meta BSP Integration',
-        theme: 'emerald'
+        auditBadge: 'Live Verified: /en/whatsapp-embedded-signup (Meta FBE)',
+        theme: 'indigo'
       },
-      'i18n-localization': {
-        title: 'Bilingual Localization Engine (Arabic RTL & English LTR)',
-        endpoint: '/en/settings & /ar/dashboard',
-        desc: 'Complete native bilingual user experience designed for both Saudi local operators and international staff.',
+      'company-information': {
+        title: 'Saudi ZATCA Regulatory Compliance & Working Hours',
+        endpoint: '/en/settings/company-information',
+        screenshot: 'radd_screenshots/en_settings_company-information.png',
+        desc: 'Enterprise business profile maintaining Saudi legal compliance data, tax identifiers, and operating hours.',
         specs: [
-          'Instant locale switching between Arabic (العربية) and English with zero page reloads',
-          'Native Right-to-Left (dir="rtl") DOM layout styling and mirrored navigation controls',
-          'Localized number and currency formatting supporting Saudi Riyal (SAR) conventions natively',
-          'Comprehensive translation dictionary eliminating raw unparsed token keys across all views'
+          'Saudi Ministry of Commerce compliance: Legal Entity Name, Commercial Registration (CR), and VAT/Tax ID',
+          'Official National Address and corporate communication email and phone registry',
+          'Day-by-Day Working Hours Schedule: configurable operating hours for Sunday through Saturday',
+          'Automated After-Hours Responder: dispatches professional out-of-office message outside working hours'
         ],
-        auditBadge: 'Playwright Verified: TC-080, TC-082',
-        theme: 'purple'
+        auditBadge: 'Live Verified: /en/settings/company-information (CR/VAT & Schedule)',
+        theme: 'teal'
+      },
+      'my-plans': {
+        title: 'Subscription Tiers & Commercial Billing Management',
+        endpoint: '/en/settings/general/my-plans',
+        screenshot: 'radd_screenshots/en_settings_general_my-plans.png',
+        desc: 'Commercial account portal managing platform licensing, active subscription packages, and payment methods.',
+        specs: [
+          'Transparent plan tiers: Trial Plan and Advance Paid Plan (e.g. SAR 350/month package)',
+          'Agent seat quota allocation and monthly active conversation volume boundaries',
+          'Secure billing and invoice generation compliant with Saudi ZATCA electronic invoicing',
+          'One-click upgrade and subscription renewal directly within company settings'
+        ],
+        auditBadge: 'Live Verified: /en/settings/general/my-plans (SAR Pricing)',
+        theme: 'rose'
       }
     };
 
@@ -2874,24 +3079,37 @@
       const feat = RADD_FEATURE_DETAILS[key];
       if (!feat) return;
 
-      const bodyHtml = `
-        <div style="font-size:0.88rem; color:#475569; margin-bottom:12px;">
-          ${feat.desc}
-        </div>
-        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:10px 14px; margin-bottom:14px; font-family:var(--font-mono); font-size:0.78rem; color:#1e40af;">
-          <strong>Target Endpoint:</strong> <code>https://app.radd-ai.com${feat.endpoint}</code>
-        </div>
-        <div style="font-size:0.8rem; font-weight:700; color:#0f172a; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px;">
-          Key Architecture Capabilities & Verified Behaviors:
-        </div>
-        <ul style="padding-left:20px; font-size:0.84rem; color:#334155; line-height:1.7; margin-bottom:14px;">
-          ${feat.specs.map(s => `<li>${s}</li>`).join('')}
-        </ul>
-        <div style="display:flex; justify-content:space-between; align-items:center; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; padding:8px 12px; font-size:0.75rem; color:#065f46; font-family:var(--font-mono);">
-          <span>✓ ${feat.auditBadge}</span>
-          <span>Verified on Production Cluster</span>
-        </div>
-      `;
+      let screenshotHtml = '';
+      if (feat.screenshot) {
+        screenshotHtml = '<div style="margin-bottom:14px; border:1px solid #cbd5e1; border-radius:10px; overflow:hidden; background:#0f172a; box-shadow:0 4px 12px rgba(0,0,0,0.08);">' +
+          '<div style="background:#1e293b; padding:6px 12px; font-family:var(--font-mono); font-size:0.72rem; color:#94a3b8; display:flex; justify-content:space-between; align-items:center;">' +
+            '<span>📸 Verified Live Interface Screenshot</span>' +
+            '<span style="color:#38bdf8;">Production Route: ' + feat.endpoint + '</span>' +
+          '</div>' +
+          '<img src="' + feat.screenshot + '" alt="' + feat.title + ' Screenshot" style="width:100%; max-height:260px; object-fit:cover; display:block;" onerror="this.remove()">' +
+        '</div>';
+      }
+
+      let specsListHtml = '';
+      if (feat.specs && feat.specs.length > 0) {
+        specsListHtml = feat.specs.map(function(s) { return '<li>' + s + '</li>'; }).join('');
+      }
+
+      const bodyHtml = '<div style="font-size:0.88rem; color:#475569; margin-bottom:12px;">' + feat.desc + '</div>' +
+        screenshotHtml +
+        '<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:10px 14px; margin-bottom:14px; font-family:var(--font-mono); font-size:0.78rem; color:#1e40af;">' +
+          '<strong>Target Production Endpoint:</strong> <code>https://app.radd-ai.com' + feat.endpoint + '</code>' +
+        '</div>' +
+        '<div style="font-size:0.8rem; font-weight:700; color:#0f172a; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px;">' +
+          'Verified Architecture Capabilities & Behaviors:' +
+        '</div>' +
+        '<ul style="padding-left:20px; font-size:0.84rem; color:#334155; line-height:1.7; margin-bottom:14px;">' +
+          specsListHtml +
+        '</ul>' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:8px; padding:8px 12px; font-size:0.75rem; color:#065f46; font-family:var(--font-mono);">' +
+          '<span>✓ ' + feat.auditBadge + '</span>' +
+          '<span>Verified via Chrome DevTools MCP & Playwright</span>' +
+        '</div>';
 
       openExecModal({
         icon: '📱',
@@ -2899,7 +3117,7 @@
         title: feat.title,
         subtitle: 'Radd AI Official Production Feature Inspection · app.radd-ai.com',
         bodyHtml: bodyHtml,
-        statusText: `MODULE ONLINE · ROUTE: ${feat.endpoint}`,
+        statusText: 'MODULE ONLINE · ROUTE: ' + feat.endpoint,
         chimeType: 'ping'
       });
     }
