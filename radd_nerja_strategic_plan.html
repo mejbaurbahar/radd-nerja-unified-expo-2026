@@ -1448,6 +1448,41 @@
       background: rgba(255, 255, 255, 0.025) !important;
     }
 
+
+    /* ScrollSpy Active Nav Styles */
+    .nav-pill {
+      color: #94a3b8;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 500;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .nav-pill:hover {
+      color: #f8fafc;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .nav-pill.active {
+      color: #38bdf8 !important;
+      background: rgba(56, 189, 248, 0.14) !important;
+      border: 1px solid rgba(56, 189, 248, 0.4) !important;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.25) !important;
+      font-weight: 700 !important;
+    }
+    .nav-pill.active-monetize {
+      color: #34d399 !important;
+      background: rgba(52, 211, 153, 0.14) !important;
+      border: 1px solid rgba(52, 211, 153, 0.4) !important;
+      box-shadow: 0 0 16px rgba(52, 211, 153, 0.25) !important;
+      font-weight: 700 !important;
+    }
+
     /* Enhanced Tooltip Bubble */
     #radd-smart-tooltip {
       background: rgba(15, 23, 42, 0.95) !important;
@@ -1472,14 +1507,14 @@
       <span style="font-size: 10.5px; background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.25); padding: 2px 8px; border-radius: 9999px; font-weight: 600;">v2.4 Executive Ready</span>
     </div>
     
-    <div style="display:flex; align-items:center; gap:8px; font-size: 12.5px; font-weight: 500;">
-      <a href="#benchmark" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">1. Benchmark</a>
-      <a href="#audit" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">2. 360° Audit</a>
-      <a href="#architecture" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">3. Architecture</a>
-      <a href="#deep-dive" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">4. Technical Deep Dive</a>
-      <a href="#radd-2-ui" style="color: #38bdf8; text-decoration: none; padding: 6px 12px; border-radius: 6px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); font-weight: 600;">5. Interactive UI Mockups (6 Screens)</a>
-      <a href="#roadmap" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">6. Roadmap</a>
-      <a href="#monetization" style="color: #34d399; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#6ee7b7'; this.style.background='rgba(52,211,153,0.1)'" onmouseout="this.style.color='#34d399'; this.style.background='transparent'">7. Monetization ($199/mo)</a>
+    <div id="scrollspy-nav" style="display:flex; align-items:center; gap:6px; font-size: 12.5px; font-weight: 500;">
+      <a href="#benchmark" class="nav-pill" data-target="benchmark">1. Benchmark</a>
+      <a href="#audit" class="nav-pill" data-target="audit">2. 360° Audit</a>
+      <a href="#architecture" class="nav-pill" data-target="architecture">3. Architecture</a>
+      <a href="#deep-dive" class="nav-pill" data-target="deep-dive">4. Technical Deep Dive</a>
+      <a href="#radd-2-ui" class="nav-pill" data-target="radd-2-ui">5. Interactive UI Mockups (6 Screens)</a>
+      <a href="#roadmap" class="nav-pill" data-target="roadmap">6. Roadmap</a>
+      <a href="#monetization" class="nav-pill" data-target="monetization">7. Monetization (/mo)</a>
     </div>
   </nav>
 
@@ -1531,7 +1566,7 @@
     </div>
 
     <!-- Section 1: Executive Charts -->
-    <section>
+    <section id="benchmark">
       <h2 class="section-title">1. Comparative Performance & Market Benchmark</h2>
       <p class="section-desc">
         Visual breakdown of current feature coverage between Radd and Nerja, alongside channel engagement benchmarks that prove why WhatsApp event-triggers outperform traditional email automation. Hover over charts for granular tooltips.
@@ -1565,7 +1600,7 @@
     </section>
 
     <!-- Section 2: Full Platform Comparison Matrix -->
-    <section>
+    <section id="audit">
       <h2 class="section-title">2. Deep 360° Feature Audit: Radd vs. Nerja Platform Matrix</h2>
       <p class="section-desc">
         A complete sub-feature and page-by-page mapping verified directly across both live environments.
@@ -1859,7 +1894,7 @@
     </section>
 
     <!-- Section 3: Architecture & Flow Diagram -->
-    <section>
+    <section id="architecture">
       <h2 class="section-title">3. The Unified "Radd 2.0" Architecture Blueprint</h2>
       <p class="section-desc">
         Visual flow showing how client-side tracking, autonomous recovery engines, human agent escalation, and revenue attribution interconnect seamlessly. Hover over any block to learn its architectural responsibility.
@@ -3758,7 +3793,8 @@ graph LR
       </div>
     
     </section>
-<section>
+    <!-- Section 6: Phased Engineering Roadmap -->
+    <section id="roadmap">
       <h2 class="section-title">6. Phased Engineering & Product Rollout Roadmap</h2>
       <p class="section-desc">
         A practical, 12-week quarterly execution plan structured for rapid delivery and immediate commercialization.
@@ -3812,7 +3848,7 @@ graph LR
     </section>
 
     <!-- Section 7: Monetization Strategy -->
-    <section>
+    <section id="monetization">
       <h2 class="section-title">7. Proposed Packaging & Monetization Strategy</h2>
       <p class="section-desc">
         How this transformation enables Radd to dramatically expand ARPU (Average Revenue Per User) and capture high-budget e-commerce merchants.
@@ -4082,6 +4118,85 @@ graph LR
         }
       }
     });
+
+    // ==========================================
+    // Real-Time ScrollSpy for Top Sticky Navigation
+    // ==========================================
+    (function initScrollSpy() {
+      const sectionIds = ['benchmark', 'audit', 'architecture', 'deep-dive', 'radd-2-ui', 'roadmap', 'monetization'];
+      const navLinks = Array.from(document.querySelectorAll('#scrollspy-nav .nav-pill'));
+      
+      function updateActiveNav() {
+        const scrollPosition = window.scrollY + 120; // 120px offset for sticky header bar
+        
+        let currentSectionId = '';
+        
+        for (let i = 0; i < sectionIds.length; i++) {
+          const sec = document.getElementById(sectionIds[i]);
+          if (sec) {
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < top + height) {
+              currentSectionId = sectionIds[i];
+              break;
+            } else if (scrollPosition >= top) {
+              // Fallback to latest section if beyond
+              currentSectionId = sectionIds[i];
+            }
+          }
+        }
+        
+        // If at top of document before first section
+        if (window.scrollY < 200) {
+          currentSectionId = sectionIds[0];
+        }
+        
+        // If scrolled to very bottom of page, activate last item
+        if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 50)) {
+          currentSectionId = sectionIds[sectionIds.length - 1];
+        }
+        
+        navLinks.forEach(link => {
+          const target = link.getAttribute('data-target');
+          if (target === currentSectionId) {
+            if (target === 'monetization') {
+              link.classList.add('active-monetize');
+              link.classList.remove('active');
+            } else {
+              link.classList.add('active');
+              link.classList.remove('active-monetize');
+            }
+          } else {
+            link.classList.remove('active');
+            link.classList.remove('active-monetize');
+          }
+        });
+      }
+
+      // Smooth click handling
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('data-target');
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            const targetOffset = targetEl.offsetTop - 75; // exact header offset
+            window.scrollTo({
+              top: Math.max(0, targetOffset),
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Passive scroll listener & initial trigger
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      window.addEventListener('resize', updateActiveNav, { passive: true });
+      document.addEventListener('DOMContentLoaded', updateActiveNav);
+      // Run immediately
+      setTimeout(updateActiveNav, 100);
+    })();
+
   </script>
 </body>
 </html>
