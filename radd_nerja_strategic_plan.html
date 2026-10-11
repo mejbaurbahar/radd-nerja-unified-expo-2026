@@ -1142,9 +1142,158 @@
       outline: none;
     }
 
+
+    /* Modern Executive Glassmorphic Styling Enhancements */
+    body {
+      background: #080c14 !important;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+      line-height: 1.6;
+    }
+
+    /* Ambient Glow Background */
+    .hero-banner {
+      position: relative;
+      background: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.22) 0%, rgba(15, 23, 42, 0) 70%), linear-gradient(180deg, #0f172a 0%, #080c14 100%) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 60px 32px 50px 32px !important;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 42px !important;
+      font-weight: 800 !important;
+      letter-spacing: -1.2px !important;
+      background: linear-gradient(135deg, #ffffff 30%, #93c5fd 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      margin-bottom: 16px !important;
+    }
+
+    .hero-subtitle {
+      max-width: 860px;
+      margin: 0 auto 24px auto;
+      font-size: 16px !important;
+      color: #94a3b8 !important;
+      line-height: 1.6 !important;
+    }
+
+    /* Modern Executive Pill */
+    .badge-ceo {
+      background: rgba(2, 132, 199, 0.15) !important;
+      border: 1px solid rgba(56, 189, 248, 0.35) !important;
+      color: #38bdf8 !important;
+      padding: 6px 16px !important;
+      border-radius: 9999px !important;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px !important;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .meta-pill {
+      background: rgba(15, 23, 42, 0.7) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: #cbd5e1 !important;
+      padding: 8px 16px !important;
+      border-radius: 10px !important;
+      font-size: 12.5px !important;
+      backdrop-filter: blur(8px);
+    }
+
+    /* Card Elevation & Glow */
+    .card, .stat-card, .feature-box, .roadmap-phase, .tier-card {
+      background: rgba(15, 23, 42, 0.6) !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      backdrop-filter: blur(12px) !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+      transition: all 0.25s ease-out !important;
+    }
+
+    .card:hover, .stat-card:hover, .feature-box:hover {
+      border-color: rgba(56, 189, 248, 0.4) !important;
+      box-shadow: 0 14px 40px rgba(2, 132, 199, 0.15) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Table Beautification */
+    .table-wrapper {
+      background: rgba(15, 23, 42, 0.7) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      border-radius: 14px !important;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      background: rgba(2, 132, 199, 0.12) !important;
+      color: #38bdf8 !important;
+      padding: 16px 20px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase;
+      font-size: 11.5px !important;
+      letter-spacing: 0.6px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    td {
+      padding: 16px 20px !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      color: #e2e8f0;
+      vertical-align: top;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02) !important;
+    }
+
+    /* Pixel-Perfect Frame Enhancements */
+    .radd-window-frame {
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7) !important;
+    }
+
 </style>
 </head>
 <body>
+
+  <!-- Modern Sticky Header Bar -->
+  <nav style="position: sticky; top: 0; z-index: 99999; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(11, 15, 25, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 12px 32px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div style="background: linear-gradient(135deg, #0284c7, #38bdf8); color: white; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);">R</div>
+      <div style="font-weight: 700; font-size: 14.5px; color: #f8fafc; letter-spacing: -0.3px;">Radd AI <span style="color:#38bdf8;">Evolution Blueprint</span></div>
+      <span style="font-size: 10.5px; background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.25); padding: 2px 8px; border-radius: 9999px; font-weight: 600;">v2.4 Executive Ready</span>
+    </div>
+    
+    <div style="display:flex; align-items:center; gap:8px; font-size: 12.5px; font-weight: 500;">
+      <a href="#benchmark" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">1. Benchmark</a>
+      <a href="#audit" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">2. 360° Audit</a>
+      <a href="#architecture" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">3. Architecture</a>
+      <a href="#deep-dive" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">4. Technical Deep Dive</a>
+      <a href="#radd-2-ui" style="color: #38bdf8; text-decoration: none; padding: 6px 12px; border-radius: 6px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); font-weight: 600;">5. Interactive UI Mockups (6 Screens)</a>
+      <a href="#roadmap" style="color: #94a3b8; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#f8fafc'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='#94a3b8'; this.style.background='transparent'">6. Roadmap</a>
+      <a href="#monetization" style="color: #34d399; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.color='#6ee7b7'; this.style.background='rgba(52,211,153,0.1)'" onmouseout="this.style.color='#34d399'; this.style.background='transparent'">7. Monetization ($199/mo)</a>
+    </div>
+  </nav>
+
 
   <!-- Global Tooltip Element -->
   <div id="radd-smart-tooltip"></div>
